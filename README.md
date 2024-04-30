@@ -29,5 +29,6 @@ MySQL в контейнере
 docker compose up -d
 ```
 
-![Изображение](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1920px-Markdown-mark.svg.png "Логотип Markdown")
+![Изображение](./homework/1/1.png "Домашнее задание - решение")
 ___
+
