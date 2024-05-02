@@ -47,8 +47,6 @@ class FormProcessor extends Controller
 
             //то же самое что и строка выше, но через ларавель
             return response('', 400);
-
         }
-
     }
 }
