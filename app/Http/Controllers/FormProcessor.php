@@ -35,10 +35,19 @@ class FormProcessor extends Controller
         //проверяем существует ли массив не пуст ли он
         if (count($request->query) != 0) {
             //если массив не пуст возвращаю json
-            return new Response(json_encode($request->query(), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            //return new Response(json_encode($request->query(), JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+
+            //то же самое что и строка выше, но через ларавель
+
+            return response()->json($request->query(), 200, [], JSON_UNESCAPED_UNICODE);
+
         } else {
-            //если массив пустой или не существует возращаю ошибку
-            return new Response("Пустой запрос", 400);
+            //если массив пустой или не существует возвращать ошибку
+            //return new Response("Пустой запрос", 400);
+
+            //то же самое что и строка выше, но через ларавель
+            return response('', 400);
+
         }
 
     }
