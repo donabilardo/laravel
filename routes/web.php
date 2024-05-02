@@ -16,3 +16,4 @@ Route::get('offers', Offers::class);
 
 Route::get('test', [FormProcessor::class, 'test']);
 
+Route::get('/userform', [FormProcessor::class,'index']);
