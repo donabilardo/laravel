@@ -4,10 +4,11 @@ use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Offers;
 use App\Http\Controllers\FormProcessor;
+use App\Http\Controllers\home\MainController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'index']);
+
+
 
 Route::get('/clear', function () {
     Artisan::call('cache:clear');

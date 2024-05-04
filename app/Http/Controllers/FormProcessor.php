@@ -32,6 +32,11 @@ class FormProcessor extends Controller
     public function index(Request $request): string
     {
 
+        return view('formview');
+    }
+
+    public function store(Request $request): string
+    {
         //проверяем существует ли массив не пуст ли он
         if (count($request->query) != 0) {
             //если массив не пуст возвращаю json
@@ -47,6 +52,7 @@ class FormProcessor extends Controller
 
             //то же самое что и строка выше, но через ларавель
             return response('', 400);
+
         }
     }
 }
