@@ -1,10 +1,18 @@
 .container {
     margin-top: 20px
 }
-.navbar{
+
+.nav .navbar {
     margin-bottom: 30px;
 }
 
-.hw_images{
+.hw_images {
     max-height: 70%;
+}
+
+.inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
 }

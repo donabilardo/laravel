@@ -18,6 +18,8 @@
         </form>
     </div>
     <div class="col-6">
-
+<p style="display: flex; flex-direction: column; justify-content: center; height: 80%">
+    В контроллере FormProcessor создайте метод store для обработки формы. Этот метод должен принимать поля формы и отправлять ответ в виде JSON-объекта, содержащего значения полей формы (имя, фамилия, email)
+</p>
     </div>
 </div>

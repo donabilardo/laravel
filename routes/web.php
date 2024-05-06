@@ -22,12 +22,13 @@ Route::get('/clear', function () {
 
 
 //Homework 2
-
 Route::get('/userform',[\App\Http\Controllers\hw2\FormProcessor::class, 'index']);
 Route::post('/userform', [\App\Http\Controllers\hw2\FormProcessor::class, 'store']);
 
 
-
+Route::get('book',[\App\Http\Controllers\hw2\BookController::class,'index']);
+Route::get('/book/{id}', [\App\Http\Controllers\hw2\BookController::class, 'destroy'])->name('del');
+Route::post('/book/add',[\App\Http\Controllers\hw2\BookController::class, 'store']);
 
 Route::get('1', TestController::class);
 
