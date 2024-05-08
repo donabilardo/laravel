@@ -34,6 +34,8 @@ Route::post('/book/add',[\App\Http\Controllers\hw2\BookController::class, 'store
 Route::get( '/file', [\App\Http\Controllers\hw2\FileUpload::class, 'index'])->name('file');
 Route::post( '/file', [\App\Http\Controllers\hw2\FileUpload::class, 'upload'])->name('upload');
 
+Route::get('/get-json',[\App\Http\Controllers\hw2\UserInfo::class,'GetUserInfo']);
+
 Route::get('1', TestController::class);
 
 Route::get('offers', Offers::class);

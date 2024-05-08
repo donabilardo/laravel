@@ -110,6 +110,8 @@
                 <p><a href="/userform">Форма для добавления пользователей</a> </p>
                 <p><a href="/book">Каталог книг</a> </p>
                 <p><a href="/file">Загрузка файлов на сервер</a> </p>
+                <p><a href="/get-json">Вывод JSON</a> </p>
+
             </div>
         </div>
     </div>
