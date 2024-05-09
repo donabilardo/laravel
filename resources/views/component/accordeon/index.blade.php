@@ -1,7 +1,7 @@
 <div class="accordion" id="accordionExample">
     <div class="accordion-item">
         <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                     aria-expanded="false" aria-controls="collapseOne">
                 Урок 1. Введение, установка и первичная настройка
             </button>
@@ -49,16 +49,17 @@
                             <img src="images/3.png" class="d-block w-100" alt="{{$title}}">
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Previous</span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span>
                     </button>
                 </div>
-
 
 
             </div>
@@ -96,22 +97,114 @@
                             <li>Не забудьте про CSRF.</li>
                         </ul>
                     </li>
-                    <li class="list-group-item"> Внутри файла /routes/web.php опишите новый роут (метод GET), который будет вызывать метод index контроллера FormProcessor по url /userform.</li>
-                    <li class="list-group-item">Запустите встроенный сервер Laravel командой php artisan serve --port=8080 и убедитесь, что форма выводится по адресу http://localhost:8080/userform.</li>
-                    <li class="list-group-item">В контроллере FormProcessor создайте метод store для обработки формы. Этот метод должен принимать поля формы и отправлять ответ в виде JSON-объекта, содержащего значения полей формы (имя, фамилия, email).</li>
-                    <li class="list-group-item">Внутри файла /routes/web.php опишите новый роут (метод POST), который будет вызывать метод store контроллера FormProcessor по url /store_form.</li>
-                    <li class="list-group-item">Отредактируйте поле action формы в шаблоне и укажите адрес /store_form.</li>
-                    <li class="list-group-item">Откройте форму в браузере по адресу http://localhost:8080/userform, заполните её и попробуйте отправить на сервер, нажав кнопку Submit. Если всё сделано правильно, вы увидите в браузере объект JSON.</li>
-                    <li class="list-group-item">Создайте новый шаблон blade для приветствия пользователя (например: «Привет, <имя>!»).</li>
-                    <li class="list-group-item">Измените метод store контроллера FormProcessor таким образом, чтобы вместо JSON он возвращал шаблон, заполненный данными пользователя.</li>
-                    <li class="list-group-item">Сделайте коммит своих изменений с помощью git и отправьте push в репозиторий.</li>
+                    <li class="list-group-item"> Внутри файла /routes/web.php опишите новый роут (метод GET), который
+                        будет вызывать метод index контроллера FormProcessor по url /userform.
+                    </li>
+                    <li class="list-group-item">Запустите встроенный сервер Laravel командой php artisan serve
+                        --port=8080 и убедитесь, что форма выводится по адресу http://localhost:8080/userform.
+                    </li>
+                    <li class="list-group-item">В контроллере FormProcessor создайте метод store для обработки формы.
+                        Этот метод должен принимать поля формы и отправлять ответ в виде JSON-объекта, содержащего
+                        значения полей формы (имя, фамилия, email).
+                    </li>
+                    <li class="list-group-item">Внутри файла /routes/web.php опишите новый роут (метод POST), который
+                        будет вызывать метод store контроллера FormProcessor по url /store_form.
+                    </li>
+                    <li class="list-group-item">Отредактируйте поле action формы в шаблоне и укажите адрес
+                        /store_form.
+                    </li>
+                    <li class="list-group-item">Откройте форму в браузере по адресу http://localhost:8080/userform,
+                        заполните её и попробуйте отправить на сервер, нажав кнопку Submit. Если всё сделано правильно,
+                        вы увидите в браузере объект JSON.
+                    </li>
+                    <li class="list-group-item">Создайте новый шаблон blade для приветствия пользователя (например:
+                        «Привет,
+                        <имя>!»).
+                    </li>
+                    <li class="list-group-item">Измените метод store контроллера FormProcessor таким образом, чтобы
+                        вместо JSON он возвращал шаблон, заполненный данными пользователя.
+                    </li>
+                    <li class="list-group-item">Сделайте коммит своих изменений с помощью git и отправьте push в
+                        репозиторий.
+                    </li>
                 </ol>
                 <h2>Решение</h2>
-                <p><a href="/userform">Форма для добавления пользователей</a> </p>
-                <p><a href="/book">Каталог книг</a> </p>
-                <p><a href="/file">Загрузка файлов на сервер</a> </p>
-                <p><a href="/get-json">Вывод JSON</a> </p>
+                <p><a href="/userform">Форма для добавления пользователей</a></p>
+                <p><a href="/book">Каталог книг</a></p>
+                <p><a href="/file">Загрузка файлов на сервер</a></p>
+                <p><a href="/get-json">Вывод JSON</a></p>
 
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Урок 3. Работа с базами данных. ORM-система Eloquent
+            </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item">Создайте базу данных, в ней — новую таблицу. Заполните поля, после чего
+                        сделайте выборку данных по указанным полям:
+                        1. Для создания, просмотра и редактирования баз данных MySQL установите программу PhpMyAdmin по
+                        [инструкции](http://). Если у вас на компьютере установлен WAMP или XAMPP, то PhpMyAdmin тоже
+                        должен быть установлен
+                    </li>
+                    <li class="list-group-item">2. Создайте базу данных с любым именем в PhpMyAdmin. Больше в нём ничего
+                        делать не нужно, остальное выполните в коде проекта.<br>
+                        <img src="/images/111.png" alt="" height="70%">
+                    </li>
+                    <li class="list-group-item">3. В папке проекта настройте файл конфигурации для базы данных. Пример:
+                        <pre>
+<code>
+    'mysql' => [
+    'read' => [
+    'host' => '192.168.1.1',
+    ],
+    'write' => [
+    'host' => '196.168.1.2'
+    ],
+    'driver' => 'mysql',
+    'database' => 'database',
+    'username' => 'root',
+    'password' => '',
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix' => '',
+    ]
+</code>
+                    </pre>
+                    </li>
+                    <li class="list-group-item">4. Создайте проект Laravel с помощью composer, выполнив команду composer
+                        create-project laravel/laravel
+                        <имя проекта>.
+                    </li>
+                    <li class="list-group-item">5. В корне проекта создайте файл .env и укажите параметры подключения к
+                        базе данных. После редактирования файла .env выполните команду php artisan config:clear.
+                    </li>
+                    <li class="list-group-item">6. В папке проекта через командную строку создайте новую модель
+                        Employee. Одновременно с этим создайте файл миграции. Для этого в команде создания модели можно
+                        использовать флаг -m: php artisan make:model Employee -mfsc. Флаг -mfsc создаст модель,
+                        наполнитель, контроллер и файл миграции.
+                    </li>
+                    <li class="list-group-item">7. С помощью команды php artisan migrate выполните миграции.</li>
+                    <li class="list-group-item">8. В файле routes/web.php создайте новый эндпоинт, например
+                        test_database
+                        <pre>
+    Route::get('/test_database', function () {
+    //Код внутри колбэка
+    });
+                    </pre>
+                    </li>
+                    <li class="list-group-item">9. Внутри функции-колбэка напишите код, который создаст новый экземпляр модели Employee, и сохраните его в базу данных с помощью метода save().</li>
+                    <li class="list-group-item">10. Запустите локальный сервер Laravel с помощью команды php artisan serve.</li>
+                    <li class="list-group-item">11. Перейдите по ссылке <адрес вашего локального сервера>/test_database (по умолчанию http://localhost:8000/test_database).</li>
+                    <li class="list-group-item">12. Используйте phpMyAdmin, чтобы убедиться, что в вашей базе данных создались таблицы employees и migrations, а в таблице employees создалась новая строка, соответствующая экземпляру модели Employee.</li>
+                    <li class="list-group-item">13. Сделайте коммит своих изменений с помощью Git и отправьте push в репозиторий.</li>
+                </ol>
             </div>
         </div>
     </div>
