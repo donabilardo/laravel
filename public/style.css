@@ -1,0 +1,18 @@
+.container {
+    margin-top: 20px
+}
+
+.nav .navbar {
+    margin-bottom: 30px;
+}
+
+.hw_images {
+    max-height: 70%;
+}
+
+.inf {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*height: 80%;*/
+}
