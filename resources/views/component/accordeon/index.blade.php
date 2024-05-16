@@ -205,6 +205,9 @@
                     <li class="list-group-item">12. Используйте phpMyAdmin, чтобы убедиться, что в вашей базе данных создались таблицы employees и migrations, а в таблице employees создалась новая строка, соответствующая экземпляру модели Employee.</li>
                     <li class="list-group-item">13. Сделайте коммит своих изменений с помощью Git и отправьте push в репозиторий.</li>
                 </ol>
+                <h2>Решение</h2>
+                <p><a href="/testmodel" target="_blank">Форма для добавления пользователей</a></p>
+
             </div>
         </div>
     </div>

@@ -36,6 +36,12 @@ Route::post( '/file', [\App\Http\Controllers\hw2\FileUpload::class, 'upload'])->
 
 Route::get('/get-json',[\App\Http\Controllers\hw2\UserInfo::class,'GetUserInfo']);
 
+
+Route::get('testmodel',[\App\Http\Controllers\hw3\EmployeeController::class, 'index'])->name('testmodel');
+Route::post('testmodel',[\App\Http\Controllers\hw3\EmployeeController::class, 'AddUser'])->name('add_user');
+Route::get('del_user',[\App\Http\Controllers\hw3\EmployeeController::class, 'DelUser'])->name('del_user');
+
+
 Route::get('1', TestController::class);
 
 Route::get('offers', Offers::class);
