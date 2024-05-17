@@ -37,7 +37,6 @@ class EmployeeController extends Controller
         $user->fulltext = $request->fulltext;
         $user->save();
 
-
         $res = Employee::all();
 
         $title = "Тестирование модели";
@@ -45,7 +44,10 @@ class EmployeeController extends Controller
         $style = $this->successStyle;
 
 
-        return view('hw3/resultmodel', ['title' => $title, 'info' => $info, 'style' => $style, 'employee' => $res]);
+//        return view('hw3/resultmodel', ['title' => $title, 'info' => $info, 'style' => $style, 'employee' => $res]);
+
+        return json_encode(Employee::query()->first(),JSON_UNESCAPED_UNICODE);
+
     }
 
 
@@ -58,7 +60,7 @@ class EmployeeController extends Controller
 //        $test = Employee::where('age', '>', 5)->get();
 //        return $test;
 
-        Employee::where('first_name',$user_name);
+        Employee::where('first_name', $user_name);
 
         return Employee::query()->where('first_name', $user_name)->get();
 

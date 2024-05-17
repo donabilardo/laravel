@@ -38,7 +38,7 @@ Route::get('/get-json',[\App\Http\Controllers\hw2\UserInfo::class,'GetUserInfo']
 
 
 Route::get('testmodel',[\App\Http\Controllers\hw3\EmployeeController::class, 'index'])->name('testmodel');
-Route::post('testmodel',[\App\Http\Controllers\hw3\EmployeeController::class, 'AddUser'])->name('add_user');
+Route::post('add_user',[\App\Http\Controllers\hw3\EmployeeController::class, 'AddUser'])->name('add_user');
 Route::get('del_user',[\App\Http\Controllers\hw3\EmployeeController::class, 'DelUser'])->name('del_user');
 
 

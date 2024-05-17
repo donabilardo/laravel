@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-3">
 
-            <form method="post" action="{{route('add_user')}}">
+            <form method="post" action="{{route('add_user')}}" class="form_add_user">
                 @csrf
                 <div class="input-group mb-3">
 
@@ -47,7 +47,7 @@
 
                     <input type="number" class="form-control" placeholder="Возраст" aria-label="Возраст"
                            aria-describedby="basic-addon1" name="age" id="age">
-                    <button class="btn btn-success">Отправить</button>
+                    <button type="submit" class="btn btn-success button_add_user">Отправить</button>
                 </div>
             </form>
         </div>
