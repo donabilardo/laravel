@@ -46,7 +46,7 @@ class EmployeeController extends Controller
 
 //        return view('hw3/resultmodel', ['title' => $title, 'info' => $info, 'style' => $style, 'employee' => $res]);
 
-        return json_encode(Employee::query()->first(),JSON_UNESCAPED_UNICODE);
+        return Employee::query()->get('*');
 
     }
 

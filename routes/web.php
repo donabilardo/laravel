@@ -42,6 +42,10 @@ Route::post('add_user',[\App\Http\Controllers\hw3\EmployeeController::class, 'Ad
 Route::get('del_user',[\App\Http\Controllers\hw3\EmployeeController::class, 'DelUser'])->name('del_user');
 
 
+
+
+
+
 Route::get('1', TestController::class);
 
 Route::get('offers', Offers::class);
