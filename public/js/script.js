@@ -36,10 +36,8 @@ form_add_user.addEventListener('submit', function (ev) {
 });
 
 
-
 button_add_user.addEventListener('click', function (ev) {
     ev.preventDefault();
-
 
     const formData = {
         _token: document.getElementsByName('_token')[0].value,
@@ -51,7 +49,7 @@ button_add_user.addEventListener('click', function (ev) {
     }
 
     const data = JSON.stringify(formData);
-    console.log(data);
+
 
     fetch(url_add_user, {
         method: 'POST',
@@ -61,12 +59,15 @@ button_add_user.addEventListener('click', function (ev) {
             'X-CSRF-TOKEN': document.getElementsByName('_token')[0].value
         }
     }).then(res => res.json())
-        .then(data => console.log('Успешно:', data))
-        .catch(error => console.error('Ошибка:', error));
+        .then(data => {
+            // console.log('Успешно:', data);
+            userData = data;
 
+        })
+        .catch(error => console.error('Ошибка:', error));
     form_add_user.reset();
 
-inf.innerHTML = '';
+    inf.innerHTML = '';
 
 });
 
