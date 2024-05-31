@@ -72,5 +72,10 @@ class EmployeeController extends Controller
 
     }
 
+    public function getCountEmployee():string
+    {
+        return Employee::query()->count();
+    }
+
 
 }

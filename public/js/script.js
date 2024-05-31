@@ -1,6 +1,8 @@
 const form = document.querySelector('.del_user');
 const del_user_link = document.querySelector('.del_user_link');
 const del_user_input = document.querySelector('.del_user_input');
+const span = document.querySelector('.employee');
+
 
 let data = null;
 
@@ -69,6 +71,23 @@ button_add_user.addEventListener('click', function (ev) {
 
     inf.innerHTML = '';
 
+    fetch('getcount', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Content-Type': 'application/json',
+            'X-CSRF-TOKEN': document.getElementsByName('_token')[0].value
+        }
+    }).then(res => res).then(data => {
+        console.log('Успешно:', data);
+        span
+    });
+
+
 });
+
+
+
+
 
 

@@ -16,6 +16,14 @@
     @include('component/navbar/index')
     <div class="alert {{$style}}" role="alert" style="margin: 20px 0px">
         <h4>{{$info}}</h4>
+        {{--        {{$CountEmployee}}--}}
+        {{--        <br>{{$composer_data}}--}}
+        <br>
+        <p>
+            (Данные из моего компоновщика) - Количество записей в таблице emloyee:
+            <span class="employee">{{$mydata}}
+            </span>
+        </p>
     </div>
 
     <div class="row">
