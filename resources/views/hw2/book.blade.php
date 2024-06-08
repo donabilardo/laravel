@@ -16,6 +16,8 @@
     @include('component/navbar/index')
     <div class="alert {{$style}}" role="alert" style="margin: 20px 0px">
         <h4>{{$info}}</h4>
+        {{$composer_data}}<br>
+        {{$mydata}}
     </div>
 
     <div class="row">
