@@ -16,6 +16,7 @@ class LayoutController extends Controller
         $test->name = "Test name11";
         $test->age = 1113;
         $test->save();
+
         return view('hw4.home',['title'=>'Главная']);
     }
 
